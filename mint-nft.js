@@ -1,9 +1,16 @@
 const { ethers } = require('ethers');
+require('dotenv').config();
 
-// Configuration
-const NFT_CONTRACT_ADDRESS = '0x58ddF40D63E5de2AB5fc3a51dEFb2db7521F7e85';
-const PRIVATE_KEY = 'ee0e694f3d70cda4889790f0a9ac0fcb97f4d1173ee66c9f3317c25a73b43696';
-const RPC_URL = 'https://preseed-testnet-1.roburna.com'; // e.g., https://mainnet.infura.io/v3/YOUR_KEY
+// Configuration from environment variables
+const NFT_CONTRACT_ADDRESS = process.env.NFT_CONTRACT_ADDRESS || '0x58ddF40D63E5de2AB5fc3a51dEFb2db7521F7e85';
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const RPC_URL = process.env.RPC_URL || 'https://preseed-testnet-1.roburna.com';
+
+if (!PRIVATE_KEY) {
+  console.error('Error: PRIVATE_KEY not found in environment variables!');
+  console.error('Please create a .env file with your PRIVATE_KEY');
+  process.exit(1);
+}
 
 // Minting configuration
 const MINT_AMOUNT = 1; // Total amount of NFTs to mint
