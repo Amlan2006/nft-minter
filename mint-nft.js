@@ -13,7 +13,7 @@ if (!PRIVATE_KEY) {
 }
 
 // Minting configuration
-const MINT_AMOUNT = 1; // Total amount of NFTs to mint
+const MINT_AMOUNT = 5; // Total amount of NFTs to mint
 const MERKLE_PROOF = []; // Add your merkle proof here if whitelisted, leave empty [] for public mint
 
 // Full contract ABI

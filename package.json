@@ -4,7 +4,8 @@
   "description": "Script to mint NFTs from a collection",
   "main": "mint-nft.js",
   "scripts": {
-    "mint": "node mint-nft.js"
+    "mint": "node mint-nft.js",
+    "distribute": "node distribute-nfts.js"
   },
   "dependencies": {
     "ethers": "^6.10.0",
