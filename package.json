@@ -1,0 +1,12 @@
+{
+  "name": "nft-minting-script",
+  "version": "1.0.0",
+  "description": "Script to mint NFTs from a collection",
+  "main": "mint-nft.js",
+  "scripts": {
+    "mint": "node mint-nft.js"
+  },
+  "dependencies": {
+    "ethers": "^6.10.0"
+  }
+}
